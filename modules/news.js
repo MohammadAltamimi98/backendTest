@@ -17,6 +17,7 @@ class News {
         this.publishedAt = data.publishedAt;
     }
    
+
 }
 
 function handleNews(req, res) {
@@ -49,7 +50,7 @@ function handleNews(req, res) {
             superagent.get(newsUrl).query(params).then(newsDbData => {
                 const newsArray = newsDbData.body.articles.map(data => new News(data));
                 cacheMemoryNews[q, from , sortBy] = newsArray;
-                newsArray.length=10; // to set the array response we get to only 12 movies.
+                newsArray.length=20; // to set the array response we get to only 12 movies.
                 console.log(' we got the news from the api');
                 res.send(newsArray)
                 console.log(newsArray);
