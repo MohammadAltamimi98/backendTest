@@ -3,10 +3,8 @@ const app = express() // initialize your express app instance
 const handleMovie = require('./modules/movies')
 const cors = require('cors')
 const handleNews = require('./modules/news');
+const handleBooks = require('./modules/books');
 const handleArt = require('./modules/art');
-
-
-
 
 app.use(cors());
 
@@ -20,5 +18,8 @@ app.get('/', // our endpoint name
 app.get('/movie', handleMovie)
 app.get('/art', handleArt)
 app.get('/news', handleNews)
+app.get('/books', handleBooks)
 
-app.listen(3009) // kick start
+ 
+app.listen(3009) // kick start handlebooks
+
