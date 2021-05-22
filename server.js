@@ -2,7 +2,7 @@ const express = require('express') // require the express package
 const app = express() // initialize your express app instance
 const handleMovie = require('./modules/movies')
 const cors = require('cors')
-// const newsHandler = require('./modules/news')
+const handleNews = require('./modules/news');
 
 
 
@@ -17,6 +17,7 @@ app.get('/', // our endpoint name
 
 
 app.get('/movie', handleMovie)
-// app.get('/news', movieHandler)
+
+app.get('/news', handleNews)
  
 app.listen(3009) // kick start
