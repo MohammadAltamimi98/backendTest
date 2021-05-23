@@ -21,5 +21,5 @@ app.get('/news', handleNews)
 app.get('/books', handleBooks)
 
  
-app.listen(3009) // kick start handlebooks
+app.listen(3009);
 
